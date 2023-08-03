@@ -15,7 +15,7 @@ Welcome to the PHP Command Sender App repository! This application allows develo
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone [https://github.com/labKnowledge/terminal_php.git](https://github.com/labKnowledge/terminal_php.git)
+   git clone [https://github.com/labKnowledge/PHP-Terminal.git](https://github.com/labKnowledge/PHP-Terminal.git)
    ```
 
 2. Navigate to the project directory:
@@ -66,7 +66,7 @@ We welcome contributions to the PHP Terminal! If you find any bugs or want to ad
 
 ## License
 
-The PHP Terminal App is open-source and available under the [MIT License](https://github.com/labKnowledge/terminal_php.git).
+The PHP Terminal App is open-source and available under the [MIT License](https://github.com/labKnowledge/PHP-Terminal.git).
 
 ## Contact
 
