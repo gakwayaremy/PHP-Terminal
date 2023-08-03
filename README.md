@@ -38,13 +38,14 @@ Welcome to the PHP Command Sender App repository! This application allows develo
 
 1. Upon accessing the application, you will be prompted the normal teminal environment. Enter username and password for you to start using terminal.
    
-2. Default username is terminator and default passoword is lolipop. to enter this on terminal type user:terminator, pass:lolipop
+2. Default username is terminator and default passoword is lolipop. to enter this on terminal type
+3. ```bash user:terminator, pass:lolipop ```
 
-3. In the terminal, you can start sending commands to the server. Type your command and press the "Enter" key to execute it.
+4. In the terminal, you can start sending commands to the server. Type your command and press the "Enter" key to execute it.
 
-4. To view the command history, use the arrow keys (up and down) to navigate through previous commands.
+5. To view the command history, use the arrow keys (up and down) to navigate through previous commands.
 
-5. To change the terminal font, click on **ctrl +** To inclease and **ctrl -** To decrease the font, and you will be able to customize the font settings.
+6. To change the terminal font, click on **ctrl +** To inclease and **ctrl -** To decrease the font, and you will be able to customize the font settings.
 
 ## Security
 
