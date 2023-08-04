@@ -2,7 +2,7 @@
 session_start();
 $inApp = false;
 $messageTop = "Welcome to PHP Terminal - ". date("m.d.y h:i:s")."\n";
-$db = new PDO("sqlite:.database.db");
+$db = new PDO("sqlite:.db");
 
 /**Database Handling**/
 //CREATE TABLE IF NOT EXISTS users('id' INTEGER Primary Key AUTOINCREMENT, 'username' TEXT NOT NULL UNIQUE, 'Password' TEXT NOTNUL)
@@ -176,7 +176,7 @@ if(!$inApp){
     </head>
     <body>
         <div id="terminal" class="terminal">
-            <pre id="output"><?php echo $messageTop;?> </pre>
+            <pre id="output"><?php echo $messageTop;?></pre>
             <input type="text" id="input" autofocus>
         </div>
         <script>
@@ -190,12 +190,34 @@ if(!$inApp){
             const terminalOutput = document.getElementById("output");
             const terminalInput = document.getElementById("input");
             var userCredentials = "";
+            var userDetails = "";
 
 
         terminalInput.addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
-                const command = ((userCredentials.length > 2) ? userCredentials + terminalInput.value : terminalInput.value);
-                userCredentials = "";
+                
+                var dIn = terminalInput.value;
+                if(dIn == "login" || dIn == "create" || dIn == "update"){
+                    userDetails = dIn + " user:";
+                    terminalOutput.textContent += "$ user: ";
+                    terminalInput.value = "";
+                    return;
+                }
+                else if(userDetails == "login user:" || userDetails == "create user:" || userDetails == "update user:"){
+                    userDetails += dIn + " pass:";
+                    terminalOutput.textContent += dIn + "\n$ pass: \n";
+                    terminalInput.type = "password";
+                    terminalInput.value = "";
+                    return;
+                }
+                else if (userDetails.endsWith("pass:")){
+                     userDetails += dIn;
+                    terminalInput.value = "";
+                    terminalInput.type = "text";
+                }
+
+                const command = ((userDetails.includes("user")) ? userDetails : terminalInput.value);
+                userDetails = "";
                 if (!(command.includes("pass:") && command.includes("user:"))) {
                     terminalOutput.textContent += "$ " + command + "\n";
                     commandList.push(command); 
@@ -241,11 +263,19 @@ if(!$inApp){
 
         terminalParent.addEventListener("keydown", function(event){
             
-            if (terminalInput.value.endsWith("pass:")) {
-                userCredentials = terminalInput.value;
-                terminalInput.value = "";
-                terminalInput.type = "password";
-            }
+            // if (terminalInput.value.endsWith("login")) {
+            //     userDetails += "login ";
+            //     terminalOutput.textContext += "$user: \n";
+            //     terminalInput.value = "";
+            // }
+
+
+
+            // if (terminalInput.value.endsWith("pass:")) {
+            //     userCredentials = terminalInput.value;
+            //     terminalInput.value = "";
+            //     terminalInput.type = "password";
+            // }
             if(event.ctrlKey && event.key === '='){
                 ++fontSize1; ++fontSize2;
                 terminalParent.style.fontSize = fontSize1 + "px";
