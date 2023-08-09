@@ -1,6 +1,6 @@
 # PHP Terminal  
 
-Welcome to the PHP Terminal repository! This application allows developers, devops, and advanced server users to be able to interact with the shell of the server in a special way using a web browser. The commands can be as simple or as complex as you wish, making it a versatile tool for server management and administration.
+We are pleased to welcome you to the PHP Terminal repository! This application allows developers, devops, and advanced server users to interact with the shell of the server in a special way through a web browser. It's a versatile tool for managing and administrating servers, and the commands can be as simple or complex as you like.
 
 ## Features
 
