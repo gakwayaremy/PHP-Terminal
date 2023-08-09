@@ -1,6 +1,6 @@
 # PHP Terminal  
 
-Welcome to the PHP Command Sender App repository! This application allows developers to send commands to the server using a web browser. The commands can be as simple or as complex as you wish, making it a versatile tool for server management and administration.
+Welcome to the PHP Terminal repository! This application allows developers, devops, and advanced server users to be able to interact with the shell of the server in a special way using a web browser. The commands can be as simple or as complex as you wish, making it a versatile tool for server management and administration.
 
 ## Features
 
@@ -18,37 +18,53 @@ Welcome to the PHP Command Sender App repository! This application allows develo
    git clone [https://github.com/labKnowledge/PHP-Terminal.git](https://github.com/labKnowledge/PHP-Terminal.git)
    ```
 
-2. Navigate to the project directory:
+2. You can dump this one-file project in any working directory of your server. 
 
-   ```bash
-   cp terminal.php /project_folder
-   ```
+3. The project is written in PHP and shell. 
 
-3. Make sure you have PHP installed on your server. If not, download and install it from the official PHP website.
-
-4. Start a local PHP server:
-
-   ```bash
-   php -S localhost:8000
-   ```
-
-5. Open your web browser and access the application at [http://localhost:8000/terminal.php](http://localhost:8000/terminal.php).
+4. Open your web browser and access the application at [http://your.addres.whatever/terminal.php](http://your.addres.whatever/terminal.php).
 
 ## Usage
 
-1. Upon accessing the application, you will be prompted the normal teminal environment. Enter username and password for you to start using terminal.
+1. Upon accessing the application, you will land on the black background and white text.
    
-2. Default username is terminator and default passoword is lolipop. to enter this on terminal type
+2. Default username is terminator and default passoword is lolipop. to enter this on terminal type 
 
    ```bash 
-   user:terminator, pass:lolipop
+   login 
    ```
+   press enter. You will be asked the user name 
 
-3. In the terminal, you can start sending commands to the server. Type your command and press the "Enter" key to execute it.
+     ```bash 
+   terminator 
+   ```
+   press enter. You will be asked the password 
 
-4. To view the command history, use the arrow keys (up and down) to navigate through previous commands.
+     ```bash 
+   lolipop 
+   ```
+   Upon successful login, you must update your password immediately 
 
-5. To change the terminal font, click on **ctrl +** To inclease and **ctrl -** To decrease the font, and you will be able to customize the font settings.
+   Do the following: type 
+
+   ```bash 
+   update 
+   ```
+   press enter. You will be asked the user name 
+
+     ```bash 
+   terminator 
+   ```
+   press enter. You will be asked the password 
+
+     ```bash 
+   Type any password Of Your Choice  
+   ```
+3. Ready to enjoy the power of PHP Terminal. In the terminal, you can start executing different command to the server. Type your command and press the "Enter" key to execute it.
+
+4. To view the command history, use the arrow keys (up and down) to navigate through commands history.
+
+5. You can customize the terminal font by clicking on **ctrl +** or **ctrl -** and enlarging or decreasing the font.
 
 ## Security
 
@@ -72,4 +88,6 @@ The PHP Terminal App is open-source and available under the [MIT License](https:
 
 If you have any questions or need support, you can reach out to the development team at dev@softwench.com or open an issue on the repository.
 
-Thank you for using the PHP Command Sender App! Happy coding!
+Thank you for using the PHP Terminal! Happy adminstrating!
+
+Feel free to buy me a coffee!

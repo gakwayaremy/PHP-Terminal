@@ -137,7 +137,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             }
         }
 
-        exec($command, $output,$ret);
+        exec($command . "  2>&1", $output,$ret);
         echo implode("\n", $output);
 
     }else{
